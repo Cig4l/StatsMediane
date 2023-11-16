@@ -51,6 +51,7 @@ print(cumulEffectifs(effectif))
 
 def mediane(caractere, effectif):
     rangStat = rang(effectif)                            # Mediane : 15.5
+    # rangStat = 16
     effectifCumule = cumulEffectifs(effectif)
 
     rangNeg = rangStat - 0.5                                # Rang - : 15
@@ -59,7 +60,7 @@ def mediane(caractere, effectif):
     # si rang est un integer
     if isinstance(rangStat, int):
         for i in range(len(effectif)):
-            if rangStat <= effectifCumule[i] == rangStat:
+            if rangStat <= effectifCumule[i]:
                 return caractere[i]
             elif effectifCumule[i] > rangStat:
                 return caractere[i-1]
